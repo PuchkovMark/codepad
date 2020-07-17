@@ -7,6 +7,16 @@ $(document).ready(function() {
     let curr_width = p.width()
     let unlock = false;
 
+    $('#code_textarea1').keyup(function() {
+        let val = $('#code_textarea1').val();//Получаем данные из input
+        $('#code_textarea1_result').html(val);//Вставляем значение в тег с классом txt
+    });
+
+    $('#code_clear').click(function () {
+        $('#code_textarea1_result').html('')
+
+    })
+
     $(".dropdown-trigger").dropdown();
 
     $(document).mousemove(function(e) {

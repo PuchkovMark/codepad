@@ -3,20 +3,50 @@ $(document).ready(function() {
     let p = $(".pan1");
     let d = $(".pan2");
     let r = $("#resize");
+    const $code_textarea =  $('#code_textarea1')
+    const $code_textarea_result = $('#code_textarea1_result')
+    let globalHash = window.location.hash
+    let globalRes = localStorage.getItem(globalHash)
+    $code_textarea.val(globalRes)
+    $code_textarea_result.html(globalRes)
 
     let curr_width = p.width()
     let unlock = false;
 
-    $('#code_textarea1').keyup(function() {
-        let val = $('#code_textarea1').val();//Получаем данные из input
-        $('#code_textarea1_result').html(val);//Вставляем значение в тег с классом txt
+    $code_textarea.keyup(function() {
+        let val = $code_textarea.val();//Получаем данные из input
+        let hash = window.location.hash
+        if (hash === '') {
+            hash = 'general'
+        }
+        localStorage.setItem(hash.toString(), val.toString())
+
+        $code_textarea_result.html(val);//Вставляем значение в тег с классом txt
     });
 
     $('#code_clear').click(function () {
-        $('#code_textarea1_result').html('')
+        $code_textarea_result.html('')
 
     })
 
+    $('.lang_change').click(function () {
+        let res;
+        let language = $(this).html()
+
+        if (language === 'JavaScript') {
+            res = localStorage.getItem('#javascript')
+        }
+        if (language === 'PHP') {
+            res = localStorage.getItem('#php')
+        }
+        if (language === 'Python') {
+            res = localStorage.getItem('#python')
+        }
+        console.log(language)
+        console.log(res)
+        $code_textarea.val(res)
+        $code_textarea_result.html(res)
+    })
     $(".dropdown-trigger").dropdown();
 
     $(document).mousemove(function(e) {

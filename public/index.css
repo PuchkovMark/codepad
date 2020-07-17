@@ -54,29 +54,30 @@
   height: auto;
 }
 
-/*
 .pan1 {
-  width: 200px;
-  min-width: 200px;
-  position: relative;
+  width: 50%;
+  margin-top: 64px;
+  min-width: 300px;
+  position: absolute;
   top: 0; left: 0;
   bottom: 0;
   background-color: #eaeaea;
 }
 
 .pan2 {
-  margin-left: 200px;
+  margin-left: 51%;
   height: 100%;
   width: auto;
   background-color: transparent;
 }
 
 #resize {
-  float: right;
-  margin-right: 0;
+  position: absolute;
+  top: 0;
   width: 5px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   cursor: e-resize;
-}*/
+  margin-left: 100%;
+}

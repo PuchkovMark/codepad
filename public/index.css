@@ -1,3 +1,7 @@
+body {
+  position: fixed;
+  height: 100vh;
+}
 .nav-wrapper {
   padding: 0 2rem;
 }
@@ -62,22 +66,34 @@
   top: 0; left: 0;
   bottom: 0;
   background-color: #eaeaea;
+  z-index: 10;
 }
 
 .pan2 {
-  margin-left: 51%;
+  margin-left: 50%;
   height: 100%;
   width: auto;
   background-color: transparent;
 }
 
 #resize {
+  cursor: e-resize;
   position: absolute;
   top: 0;
   width: 5px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
-  cursor: e-resize;
+
   margin-left: 100%;
+}
+#code_textarea1 {
+  height: 100%;
+  width: 100%;
+  border: none;
+  margin-top: 1rem;
+}
+#code_textarea1:focus {
+  border: none;
+  box-shadow: unset;
 }

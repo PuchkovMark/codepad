@@ -1,3 +1,27 @@
-<h1>Добро пожаловать</h1>
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">JavaScript</a></li>
+    <li><a href="#!">PHP</a></li>
+    <li><a href="#!">Python</a></li>
+</ul>
+<nav>
+    <div class="nav-wrapper">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Run
+            <i class="material-icons right" style="line-height: inherit;">send</i>
+        </button>
+        <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Lang<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+    </div>
+</nav>
 
-<p>Здесь будер coderpad</p>
+<div class="row" style="height: 95%; margin: unset;">
+    <form class="col s12" style="height: 100%; overflow: hidden;">
+        <div class="row" style="height: 100%; margin: unset;">
+            <div class="input-field col s12" style="height: 100%">
+                <textarea id="code_textarea1" class="materialize-textarea" style=""></textarea>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,13 +1,16 @@
 $(document).ready(function() {
-    var p = $(".pan1");
-    var d = $(".pan2");
-    var r = $("#resize");
 
-    var curr_width = p.width()
-    var unlock = false;
+    let p = $(".pan1");
+    let d = $(".pan2");
+    let r = $("#resize");
+
+    let curr_width = p.width()
+    let unlock = false;
+
+    $(".dropdown-trigger").dropdown();
 
     $(document).mousemove(function(e) {
-        var change = curr_width + (e.clientX - curr_width);
+        let change = curr_width + (e.clientX - curr_width);
 
         if(unlock) {
             if(change > 299) {
